@@ -1,9 +1,9 @@
+import Nav from "./Nav";
 
-
-
-function Header(){
-    return(
+const Header = () => {
+    return (
         <>
+        <Nav />
         </>
     );
 }

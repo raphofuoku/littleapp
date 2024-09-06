@@ -1,7 +1,7 @@
 
 
 
-function Footer(){
+const Footer = () => {
     return(
         <>
         </>
