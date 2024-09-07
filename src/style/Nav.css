@@ -1,0 +1,51 @@
+/* General Navigation Bar Styling */
+.main-nav {
+    background-color: #EDEFEE; /* Background color for the nav */
+    padding: 20px; /* Add some padding to the nav */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Evenly distribute space between items */
+    width: 100%;
+    max-width: 1200px; /* Limit width of the nav bar */
+  }
+
+  .main-nav li {
+    margin: 0 15px; /* Spacing between each nav item */
+  }
+
+  .nav-item {
+    text-decoration: none; /* Remove default link underline */
+    color: #495E57; /* Text color */
+    font-size: 18px; /* Font size */
+    text-transform: uppercase; /* Make text uppercase */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .nav-item:hover {
+    color: #F4CE14; /* Change color on hover */
+  }
+
+  /* Mobile Responsive Styles */
+  @media (max-width: 768px) {
+    .main-nav ul {
+      flex-direction: column; /* Stack the items vertically */
+      align-items: center;
+    }
+
+    .main-nav li {
+      margin: 10px 0; /* Add spacing between items for mobile */
+    }
+
+    .nav-item {
+      font-size: 16px; /* Slightly reduce the font size for mobile */
+    }
+  }
