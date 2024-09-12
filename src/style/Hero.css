@@ -1,0 +1,129 @@
+/* Base Styles for Hero Component */
+.hero {
+    display: flex;
+    flex-direction: column-reverse; /* Mobile-first approach */
+    align-items: center;
+    justify-content: space-between;
+    background-color: #495E57; /* Dark green background */
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-content {
+    text-align: left;
+    color: #EDEFEE; /* Light color for text */
+    width: 100%;
+    max-width: 450px;
+  }
+
+  .hero-title {
+    font-family: 'Markazi Text';
+    font-size: 3rem;
+    font-weight: bold;
+    color: #F4CE14;
+    margin: 0;
+  }
+
+  .hero-subtitle {
+    font-family: 'Markazi Text';
+    font-size: 2rem;
+    color: white;
+    margin: 10px 0;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .primary-button a {
+    color: #333;
+    text-decoration: none;
+    padding: 12px 24px;
+    background-color: #F4CE14; /* Yellow button */
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block; /* Ensure it respects padding */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .primary-button a:hover {
+    background-color: #e0b800; /* Darker yellow on hover */
+    transform: translateY(-3px);
+  }
+
+
+  /* Hero Image Container */
+  .hero-image-container {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    right: -50px; /* Move the image to the right outside the section */
+  }
+
+  .hero-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-top: -50px; /* Overflow image below the section */
+    position: relative;
+  }
+
+  /* Desktop Styles */
+  @media (min-width: 768px) {
+    .hero {
+      flex-direction: row;
+      padding: 50px 100px;
+    }
+
+    .hero-content {
+      width: 50%; /* Align content to the left */
+      margin-right: 40px;
+    }
+
+    .hero-image-container {
+      width: 50%; /* Align image to the right */
+      position: relative;
+      right: -60px; /* Move the image more outside the section */
+    }
+
+    .hero-image {
+      width: 100%;
+      margin-top: -70px; /* More overflow below section on desktop */
+      object-fit: cover;
+      border-radius: 8px;
+    }
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 767px) {
+    .hero-content {
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+    }
+
+    .primary-button a {
+      padding: 10px 15px;
+      font-size: 1rem;
+    }
+
+    .hero-image {
+      margin-top: -20px;
+    }
+
+    .hero-image-container {
+      right: 0; /* Reset for mobile to avoid too much overflow */
+    }
+  }
