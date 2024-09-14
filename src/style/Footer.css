@@ -1,0 +1,87 @@
+/* Footer container */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: #e6e6e6;
+    padding: 2rem;
+    color: #495E57;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-logo-image {
+    width: 150px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex: 3;
+    gap: 2rem;
+  }
+
+  .footer-column {
+    flex: 1;
+  }
+
+  .footer-column h4 {
+    font-family: 'Markazi Text';
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #495E57;
+  }
+
+  .footer-column ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #495E57;
+    transition: color 0.3s ease;
+  }
+
+  .footer-column ul li a:hover {
+    color: #0c4633;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-links {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
+
+    .footer-column {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .footer-logo-image {
+      width: 120px;
+    }
+
+    .footer-column h4 {
+      font-size: 1rem;
+    }
+  }

@@ -4,7 +4,7 @@
     flex-direction: column-reverse; /* Mobile-first approach */
     align-items: center;
     justify-content: space-between;
-    background-color: #495E57; /* Dark green background */
+    background-color: #495E57;
     padding: 50px;
     position: relative;
     overflow: hidden;
