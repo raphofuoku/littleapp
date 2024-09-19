@@ -1,0 +1,32 @@
+.confirming-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  .confirming-section {
+    width: 60%;
+  }
+
+  .extra-image {
+    width: 35%;
+  }
+
+  .extra-image img {
+    width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    .confirming-page {
+      flex-direction: column;
+    }
+
+    .extra-image {
+      display: none;
+    }
+
+    .confirming-section {
+      width: 100%;
+    }
+  }
