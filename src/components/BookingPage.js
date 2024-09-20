@@ -60,8 +60,8 @@ const BookingPage = () => {
         <div className="booking-form">
           <form onSubmit={submitForm}>
             <div className="form-group">
-              <label>Occasion</label>
-              <select value={occasion} onChange={(e) => setOccasion(e.target.value)} required>
+              <label id="occasion-label">Occasion</label>
+              <select aria-labelledby="occasion-label" name="occasion" value={occasion} onChange={(e) => setOccasion(e.target.value)} required>
                 <option value="">Select Occasion</option>
                 <option value="Birthday">Birthday</option>
                 <option value="Anniversary">Anniversary</option>

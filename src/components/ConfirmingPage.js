@@ -48,8 +48,9 @@ const ConfirmingPage = () => {
 
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label>First Name</label>
+              <label id="firstName-label">First Name</label>
               <input
+                aria-labelledby="firstName-label"
                 type="text"
                 name="firstName"
                 value={formDetails.firstName}
@@ -59,8 +60,9 @@ const ConfirmingPage = () => {
             </div>
 
             <div className="form-group">
-              <label>Last Name</label>
+              <label id="lastName-label">Last Name</label>
               <input
+                aria-labelledby="lastName-label"
                 type="text"
                 name="lastName"
                 value={formDetails.lastName}
