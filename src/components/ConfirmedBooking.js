@@ -1,11 +1,49 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import Header from './Header';
+import Footer from './Footer';
+import '../style/ConfirmedBooking.css';
+import glassescheer from "../assets/glassescheer.png";
+import { Link } from 'react-router-dom';
 
 const ConfirmedBooking = () => {
+  const location = useLocation();
+  const bookingDetails = location.state || {}; // Get booking details from state
+
   return (
-    <div className="confirmed-booking">
-      <h1>Your booking has been confirmed!</h1>
-      <p>Thank you for choosing Little Lemon. We look forward to serving you!</p>
-    </div>
+    <>
+      <Header />
+      <section className="confirmed-booking-container">
+        <div className="booking-box">
+          <h2>Congratulation! Your booking is confirmed.</h2>
+
+          <div className="summary-section">
+            <h3>Summary:</h3>
+            <p><strong>Occasion:</strong> {bookingDetails.occasion}</p>
+            <p><strong>Guest:</strong> {bookingDetails.guest}</p>
+            <p><strong>Date:</strong> {bookingDetails.date}</p>
+            <p><strong>Time:</strong> {bookingDetails.time}</p>
+            <p><strong>Email:</strong> {bookingDetails.email}</p>
+          </div>
+
+          <div className="menu-prompt">
+            <p>
+              Explore our menu before you arrive. From the finest cooking, to the best
+              wine list this side of Chicago. Prepare to be even more excited.
+            </p>
+          </div>
+
+          <button className="view-menu-button">
+          <Link to="/menu" aria-label="online menu Button">Menu</Link>
+          </button>
+        </div>
+
+        <div className='confirmedbooking-image'>
+            <img src={glassescheer} alt="two glasses cheering" />
+        </div>
+      </section>
+      <Footer />
+    </>
   );
 };
 

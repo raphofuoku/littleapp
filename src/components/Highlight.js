@@ -9,7 +9,7 @@ const Highlights = ()  => {
     <section className="highlights">
       <div className="highlights-header">
         <h2 className="highlights-title">This Week's Specials!</h2>
-        <button className="primary-button primary-button--yellow">
+        <button className="primary-button">
             <Link to="/menu" aria-label="Menu Button">Online Menu</Link>
         </button>
       </div>

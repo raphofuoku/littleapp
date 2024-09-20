@@ -10,13 +10,13 @@
     align-items: center;
     margin-bottom: 2rem;
   }
-  
+
   .highlights-title {
     font-size: 2rem;
     color: #495e57;
     margin: 0;
   }
-  
+
   .primary-button {
     background-color: #f4ce14;
     color: #333;
@@ -28,18 +28,18 @@
     border-radius: 8px;
     transition: background-color 0.3s ease;
   }
-  
+
   .primary-button:hover {
     background-color: #e5bb12;
   }
-  
+
   /* Highlights Content Grid */
   .highlights-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
   }
-  
+
   .highlights-card {
     background-color: #EDEFEE;
     border-radius: 0.5rem;
@@ -48,24 +48,24 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .highlights-card-image-container {
     width: 100%;
     height: 200px;
     overflow: hidden;
   }
-  
+
   .highlights-card-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
   }
-  
+
   .highlights-card-image:hover {
     transform: scale(1.05);
   }
-  
+
   .highlights-card-content {
     padding: 1rem;
     display: flex;
@@ -73,46 +73,45 @@
     justify-content: space-between;
     flex-grow: 1;
   }
-  
+
   .highlights-card-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .highlights-card-title {
     font-size: 1.5rem;
     color: #333;
   }
-  
+
   .highlights-card-price {
     font-size: 1.2rem;
     color: #EE9972;
   }
-  
+
   .highlights-card-main {
     margin-top: 1rem;
   }
-  
+
   .highlights-card-description {
     font-size: 0.9rem;
     color: #666;
     margin-bottom: 1.5rem;
   }
-  
+
   /* Mobile Adjustments */
   @media (max-width: 768px) {
     .highlights-header {
       flex-direction: column;
       text-align: center;
     }
-  
+
     .primary-button {
       margin-top: 1rem;
     }
-  
+
     .highlights-content {
       grid-template-columns: 1fr;
     }
   }
-  

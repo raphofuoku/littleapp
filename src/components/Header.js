@@ -17,7 +17,7 @@ const Header = () => {
 
                  {/* Hamburger icon */}
            <button className="hamburger-menu" onClick={toggleMenu}>
-                {/* Simple icon using divs */}
+
                 <div className={isMenuOpen ? 'bar1 open' : 'bar1'}></div>
                 <div className={isMenuOpen ? 'bar2 open' : 'bar2'}></div>
                 <div className={isMenuOpen ? 'bar3 open' : 'bar3'}></div>

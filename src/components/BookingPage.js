@@ -2,14 +2,14 @@ import React, { useState, useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../style/BookingPage.css';
 import table from '../assets/table.jpg';
-import backgroundimage from '../assets/backgroundimage.png';
+import coupleondate from '../assets/coupleondate.png';
 import { fetchAPI,} from '../utility/mockAPI';
 
 // Reducer to handle available times
 const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES':
-      return fetchAPI(action.payload); // Assuming fetchAPI returns the available times based on the date
+      return fetchAPI(action.payload);
     default:
       return state;
   }
@@ -17,7 +17,7 @@ const availableTimesReducer = (state, action) => {
 
 // Initial times for today
 const initializeTimes = () => {
-  const today = new Date().toISOString().split('T')[0]; // Today's date
+  const today = new Date().toISOString().split('T')[0];
   return fetchAPI(today);
 };
 
@@ -106,8 +106,8 @@ const BookingPage = () => {
         </div>
       </div>
 
-      <div className="extra-image">
-        <img src={backgroundimage} alt="Little Lemon" />
+      <div className="booking-image">
+        <img src={coupleondate} alt="couple on date" />
       </div>
     </section>
   );

@@ -1,32 +1,104 @@
+/* General container style */
 .confirming-page {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    padding: 20px;
+    align-items: flex-start;
+    padding: 2rem;
+    min-height: 80vh;
+    background-color: white;
   }
 
+  /* Style for the confirming-section */
   .confirming-section {
-    width: 60%;
+    width: 45%;
+    background-color: #f7f7f7;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
+  .confirming-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #495E57;
+  }
+
+  .confirming-section p {
+    font-size: 1rem;
+    color: #495E57;
+    margin-bottom: 1.5rem;
+  }
+
+  .confirming-section .form-group {
+    margin-bottom: 1rem;
+    margin-right: 1.5rem;
+  }
+
+  .confirming-section label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #495E57;
+  }
+
+  .confirming-section input,
+  .confirming-section textarea {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  .confirming-section textarea {
+    resize: none;
+    height: 100px;
+  }
+
+  .confirming-section button {
+    background-color: #F4CE14;
+    color: #495E57;
+    border: none;
+    border-radius: 50px;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+  }
+
+  .confirming-section button:hover {
+    background-color: #b08606;
+  }
+
+  /* Style for the extra-image section */
   .extra-image {
-    width: 35%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .extra-image img {
-    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 40px;
   }
 
+  /* Responsive Design */
   @media (max-width: 768px) {
     .confirming-page {
       flex-direction: column;
+      align-items: center;
+    }
+
+    .confirming-section {
+      width: 90%;
+      margin-bottom: 2rem;
     }
 
     .extra-image {
       display: none;
-    }
-
-    .confirming-section {
-      width: 100%;
     }
   }
