@@ -3,6 +3,7 @@ import '../style/Testimonials.css';
 import photo1 from '../assets/photo1.jpg';
 import photo2 from '../assets/photo2.png'
 
+//for demo purposes
 const testimonialsData = [
   {
     rating: "⭐⭐⭐⭐⭐",

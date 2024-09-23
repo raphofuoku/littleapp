@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Little Lemon Restaurant - Reserve a Table Feature
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is part of the Meta Frontend Developer Professional Certificate. It focuses on adding a "Reserve a Table" feature to the Little Lemon Restaurant website. This feature allows customers to book a table online, entering the necessary details through an easy-to-use form.
 
-## Available Scripts
+## Project Overview
 
-In the project directory, you can run:
+The Little Lemon restaurant website was enhanced by incorporating a table reservation feature. I designed the homepage and the reservation feature using Figma before implementing them using React.js. The main focus of the project is to deliver a seamless user experience where customers can reserve a table at the restaurant by providing essential information.
 
-### `npm start`
+### `Key Features:`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Homepage Design: Created a visually appealing homepage for Little Lemon, showcasing the restaurant's offerings.
+* Reservation Form: Built a form for users to input their booking details, including:
+    * First Name
+    * Last Name
+    * Phone Number
+    * Email Address
+    * Number of Guests
+    * Reservation Date and Time
+    * Occasion
+    * Special Requests
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### `Technologies Used:`
 
-### `npm test`
+* Figma: Designed the homepage and the reservation feature before development.
+* React.js: Built the website and the reservation feature, utilizing functional components and hooks.
+* HTML5 & CSS3: Structured and styled the web pages for a responsive layout.
+* JavaScript (ES6): Added interactivity and form handling for the reservation feature.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Screenshots
 
-### `npm run build`
+### Homepage Design in Figma
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Little Lemon Homepage](public/Homepage.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Reserve a Table Feature Design in Figma
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Little Lemon Reservation Page](public/Reservation.png)
 
-### `npm run eject`
+## Link
+Live Demo (Coming soon)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Features & Functionality
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Reservation Form
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* Input Validation: Each input field in the form is validated to ensure proper user data submission.
+* Date & Time Picker: Customers can select the date and time of their reservation.
+* Responsive Design: The form is fully responsive and optimized for mobile devices
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Form Details:
 
-## Learn More
+* First Name (required)
+* Last Name (required)
+* Phone Number (required)
+* Email Address (required)
+* Number of Guests (required, 1-20)
+* Reservation Date (required)
+* Occasion (required)
+* Special Requests (optional)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Challenges & Learning Outcomes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* Figma Design to Code: Learned how to transform a design from Figma into a fully functional React app.
+* React Forms and State Handling: Gained practical experience in handling form inputs and managing component state using React hooks.
+* Frontend Validation: Implemented front-end validation to ensure the form collects accurate information.
 
-### Code Splitting
+## Future Improvements
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+* Backend Integration: Implementing a backend to handle table reservation requests and store user data.
+* Improved Accessibility: Ensuring the form is fully accessible with better keyboard navigation and screen reader support.
 
-### Analyzing the Bundle Size
+## Meta Frontend Developer Certificate
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+This project is part of my journey in completing the Meta Frontend Developer Professional Certificate, where I am learning how to design, develop, and test user-friendly web applications.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Feel free to submit a pull request or open an issue if you have suggestions for improvement.

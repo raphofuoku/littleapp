@@ -8,14 +8,14 @@ import { Link } from 'react-router-dom';
 
 const ConfirmedBooking = () => {
   const location = useLocation();
-  const bookingDetails = location.state || {}; // Get booking details from state
+  const bookingDetails = location.state || {};
 
   return (
     <>
       <Header />
       <section className="confirmed-booking-container">
         <div className="booking-box">
-          <h2>Congratulation! Your booking is confirmed.</h2>
+          <h2>Congratulations! Your booking is confirmed.</h2>
 
           <div className="summary-section">
             <h3>Summary:</h3>
@@ -28,18 +28,18 @@ const ConfirmedBooking = () => {
 
           <div className="menu-prompt">
             <p>
-              Explore our menu before you arrive. From the finest cooking, to the best
+              Explore our menu before you arrive. From the finest cooking to the best
               wine list this side of Chicago. Prepare to be even more excited.
             </p>
           </div>
 
           <button className="view-menu-button">
-          <Link to="/menu" aria-label="online menu Button">Menu</Link>
+            <Link to="/menu" aria-label="Explore menu">Menu</Link>
           </button>
         </div>
 
-        <div className='confirmedbooking-image'>
-            <img src={glassescheer} alt="two glasses cheering" />
+        <div className="confirmedbooking-image">
+          <img src={glassescheer} alt="Two glasses cheering in celebration" />
         </div>
       </section>
       <Footer />

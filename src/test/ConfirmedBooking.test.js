@@ -1,44 +1,62 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Route } from 'react-router-dom';
 import ConfirmedBooking from '../components/ConfirmedBooking';
+import { axe, toHaveNoViolations } from 'jest-axe';
+
+expect.extend(toHaveNoViolations);
 
 describe('ConfirmedBooking Component', () => {
-  it('should render confirmed booking details', () => {
-    const state = {
-      occasion: 'Anniversary',
-      guest: '2',
-      date: '2024-09-20',
-      time: '8:30 PM',
-      email: 'test@example.com',
-    };
+  const mockBookingDetails = {
+    occasion: 'Birthday',
+    guest: '2',
+    date: '2024-09-30',
+    time: '7:00 PM',
+    email: 'test@example.com',
+  };
 
+  beforeEach(() => {
     render(
-      <MemoryRouter initialEntries={[{ state }]}>
-        <ConfirmedBooking />
+      <MemoryRouter initialEntries={['/confirmed']}>
+        <Route path="/confirmed">
+          <ConfirmedBooking />
+        </Route>
       </MemoryRouter>
     );
-
-    expect(screen.getByText(/Your booking is confirmed/i)).toBeInTheDocument();
-    expect(screen.getByText(/Occasion: Anniversary/i)).toBeInTheDocument();
-    expect(screen.getByText(/Guest: 2/i)).toBeInTheDocument();
   });
 
-  it('should display menu prompt', () => {
-    const state = {
-      occasion: 'Anniversary',
-      guest: '2',
-      date: '2024-09-20',
-      time: '8:30 PM',
-      email: 'test@example.com',
-    };
+  it('renders booking confirmation message', () => {
+    // Simulating the state from the previous component
+    window.history.replaceState({ state: mockBookingDetails }, '');
 
-    render(
-      <MemoryRouter initialEntries={[{ state }]}>
-        <ConfirmedBooking />
-      </MemoryRouter>
-    );
+    expect(screen.getByText(/Congratulations! Your booking is confirmed/i)).toBeInTheDocument();
+  });
 
-    expect(screen.getByText(/Explore our menu/i)).toBeInTheDocument();
+  it('displays the booking summary correctly', () => {
+    // Simulating the state from the previous component
+    window.history.replaceState({ state: mockBookingDetails }, '');
+
+    expect(screen.getByText(/Occasion:/i)).toHaveTextContent('Birthday');
+    expect(screen.getByText(/Guest:/i)).toHaveTextContent('2');
+    expect(screen.getByText(/Date:/i)).toHaveTextContent('2024-09-30');
+    expect(screen.getByText(/Time:/i)).toHaveTextContent('7:00 PM');
+    expect(screen.getByText(/Email:/i)).toHaveTextContent('test@example.com');
+  });
+
+  it('has a link to the menu', () => {
+    // Simulating the state from the previous component
+    window.history.replaceState({ state: mockBookingDetails }, '');
+
+    const menuLink = screen.getByLabelText(/Explore menu/i);
+    expect(menuLink).toBeInTheDocument();
+    expect(menuLink).toHaveAttribute('href', '/menu');
+  });
+
+  it('passes accessibility checks', async () => {
+    // Simulating the state from the previous component
+    window.history.replaceState({ state: mockBookingDetails }, '');
+
+    const results = await axe(screen.getByRole('main'));
+    expect(results).toHaveNoViolations();
   });
 });
